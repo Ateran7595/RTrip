@@ -4,6 +4,19 @@ export default {
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
+		animation:{
+			'loop-scroll': 'loop-scroll 60s linear infinite',
+		},
+		keyframes:{
+			"loop-scroll": {
+				from: {transform: "translateX(0)"},
+				to: { transform: "translateX(-100%)"},
+			},
+		},
+		fontFamily: {
+			robotoSlab: ['"Roboto Slab"', 'serif'],
+			courgette: ['Courgette', 'sans-serif']
+		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
