@@ -7,7 +7,7 @@ function Hero() {
   return (
     <div className="relative w-full ">
       <div className="absolute inset-0 font-robotoSlab w-[1000px] ml-auto mr-auto mb-[1000px] flex flex-col justify-center items-center font-bold text-center z-10">
-        <h1 className='text-teal-400 text-[65px] mb-4'>Explore Your Next Destination:</h1>
+        <h1 className='text-teal-400 text-[65px] mb-4'>Explore Your Next Destination</h1>
         <h1 className='text-[30px] text-neutral-200'>Discover your next adventure with ease! Our platform suggests a random travel destination based on your preferences, making trip planning effortless and exciting.</h1>
         <p className='text-white text-[30px] mt-4'>Let us find the perfect getaway for you!</p>
 
