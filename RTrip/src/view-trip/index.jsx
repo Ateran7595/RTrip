@@ -1,8 +1,11 @@
 import { db } from '@/service/firebaseConfig'
 import { doc, getDoc } from 'firebase/firestore'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { toast } from 'sonner'
+import TripInfo from './components/TripInfo'
+import ItineraryTrip from './components/ItineraryTrip'
+import TripHotels from './components/TripHotels'
 
 function ViewTrip() {
     const {tripID} = useParams()
@@ -26,7 +29,13 @@ function ViewTrip() {
     }
 
   return (
-    <div>{tripID}</div>
+    <div>
+        <TripInfo trip={trip} />
+        <div className='border-b-2 w-[1350px] m-auto mb-5'></div>
+        <ItineraryTrip trip={trip} />
+        <div className='border-b-2 w-[1350px] m-auto mb-5 mt-10'></div>
+        <TripHotels trip={trip} />
+    </div>
   )
 }
 

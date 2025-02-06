@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { AI_PROMPT, travelActivities, travelBudget, travelClimate, travelCompanions, travelPreference } from '@/constants/options'
 import { chatSession } from '@/service/AIModal'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import {
@@ -9,8 +9,6 @@ import {
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog"
 import { FcGoogle } from "react-icons/fc";
 import { useGoogleLogin } from '@react-oauth/google'
@@ -154,7 +152,6 @@ function CreateTrip() {
                 onClick={login}
                 className="font-robotoSlab w-[400px] mt-4"><FcGoogle />Sign In With Google</Button>
               </div>
-              
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
