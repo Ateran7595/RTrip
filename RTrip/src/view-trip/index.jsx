@@ -7,6 +7,7 @@ import TripInfo from './components/TripInfo'
 import ItineraryTrip from './components/ItineraryTrip'
 import TripHotels from './components/TripHotels'
 import GeneralInfo from './components/GeneralInfo'
+import Footer from '@/components/custom/Footer'
 
 function ViewTrip() {
     const {tripID} = useParams()
@@ -32,12 +33,13 @@ function ViewTrip() {
   return (
     <div>
         <TripInfo trip={trip} />
-        <div className='border-b-2 w-[1400px] m-auto mb-5'></div>
+        <div className='border-b-2 w-[90%]  m-auto mb-5'></div>
         <ItineraryTrip trip={trip} />
-        <div className='border-b-2 w-[1400px] m-auto mb-5 mt-10'></div>
+        <div className='border-b-2 w-[90%] m-auto mb-5 mt-10'></div>
         <TripHotels trip={trip} />
-        <div className='border-b-2 w-[1400px] m-auto mb-5 mt-10'></div>
+        <div className='border-b-2 w-[90%] m-auto mb-5 mt-10'></div>
         <GeneralInfo trip={trip} />
+        <Footer />
     </div>
   )
 }

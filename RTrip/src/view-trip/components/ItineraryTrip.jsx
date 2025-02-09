@@ -11,7 +11,7 @@ function ItineraryTrip({ trip }) {
     <div>
         <div>
           <h2 className="text-[30px] font-bold flex justify-center text-center">📅Itinerary</h2> 
-          <Carousel className="m-auto mt-8 flex justify-center items-center font-robotoSlab w-[1270px]">
+          <Carousel className="m-auto mt-8 flex justify-center items-center font-robotoSlab xl:w-[1270px] xs:w-[80%]">
             <CarouselContent>
               {trip?.tripData?.travelPlanDetails?.suggestedDestination?.itinerary.map((item, index) => (
                 <ItineraryCard key={index} item={item} />

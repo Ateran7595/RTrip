@@ -16,6 +16,7 @@ import axios from 'axios'
 import { doc, setDoc } from 'firebase/firestore'
 import { db } from '@/service/firebaseConfig'
 import { useNavigate } from 'react-router-dom'
+import Footer from '@/components/custom/Footer'
 
 
 function TripCreator({ travelObject, objName, formData, setFormData }){
@@ -32,9 +33,9 @@ function TripCreator({ travelObject, objName, formData, setFormData }){
   }, [formData])
 
   return (
-    <div className='mt-16'>
+    <div className='mt-16 flex flex-col'>
       <h2 className='text-left text-[25px] font-semibold mb-5'>{travelObject.question}</h2>
-      <div className='flex gap-5 w-[1140px] justify-center flex-wrap'>
+      <div className='flex gap-5 lg:w-[1140px] md:w-[] justify-center flex-wrap'>
         {travelObject.options.map((item, index) => (
           <div key={index} 
           onClick={() => handleInputChange(objName, item.title)}
@@ -122,12 +123,14 @@ function CreateTrip() {
         <h1 className='font-bold text-[47px]'>Choose your preferences</h1>
         <p className='mt-3 text-[20px]'>Provide basic information about your travel style, budget, and interests, so we can suggest the perfect destination for you!</p>
       </div>
+      <div className='flex flex-col justify-center items-center'>
+        <TripCreator travelObject={travelPreference} objName={travelPreference.objName} formData={formData} setFormData={setFormData} />
+        <TripCreator travelObject={travelBudget} objName={travelBudget.objName} formData={formData} setFormData={setFormData} />
+        <TripCreator travelObject={travelActivities} objName={travelActivities.objName} formData={formData} setFormData={setFormData} />
+        <TripCreator travelObject={travelClimate} objName={travelClimate.objName} formData={formData} setFormData={setFormData} />
+        <TripCreator travelObject={travelCompanions} objName={travelCompanions.objName} formData={formData} setFormData={setFormData} />  
+      </div>
 
-      <TripCreator travelObject={travelPreference} objName={travelPreference.objName} formData={formData} setFormData={setFormData} />
-      <TripCreator travelObject={travelBudget} objName={travelBudget.objName} formData={formData} setFormData={setFormData} />
-      <TripCreator travelObject={travelActivities} objName={travelActivities.objName} formData={formData} setFormData={setFormData} />
-      <TripCreator travelObject={travelClimate} objName={travelClimate.objName} formData={formData} setFormData={setFormData} />
-      <TripCreator travelObject={travelCompanions} objName={travelCompanions.objName} formData={formData} setFormData={setFormData} />
 
       <div className='mt-10 mb-5'>
         <Button disabled={loading} onClick={handleGenerateTrip}>
@@ -136,7 +139,7 @@ function CreateTrip() {
           } 
         </Button>
       </div>
-
+<Footer />
       <Dialog open={openDialog}>
         <DialogContent>
           <DialogHeader>
@@ -156,7 +159,7 @@ function CreateTrip() {
           </DialogHeader>
         </DialogContent>
       </Dialog>
-
+      
     </div>
   )
 }

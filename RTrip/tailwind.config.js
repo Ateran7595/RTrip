@@ -4,6 +4,9 @@ export default {
     content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
   	extend: {
+		screens: {
+			xs: "360px", // Extra small screens (e.g., small phones)
+		},
 		animation:{
 			'loop-scroll': 'loop-scroll 60s linear infinite',
 		},
