@@ -53,10 +53,10 @@ function TripHotels({ trip }) {
                 <CarouselItem key={index}>
                   <Link to={'https://www.google.com/maps/search/?api=1&query='+ item?.hotelName + "," + item?.latitude + "," + item?.longitude} target="_blank" className="text-black">
                     <div className="flex lg:flex-row xs:flex-col p-4 rounded-xl border hover:shadow-lg cursor-pointer transition-transform hover:scale-90">
-                      <div className="flex flex-col justify-center gap-4 lg:items-start pl-5 lg:w-[800px] xs:w-[80%] m-auto lg:text-start xs:text-center ">
+                      <div className="flex flex-col justify-center gap-4 lg:items-start xs:items-center md:pl-5 lg:w-[800px] xs:w-full m-auto lg:text-start xs:text-center ">
                         <h1 className="text-[35px] font-semibold">{item?.hotelName}</h1>
                         <p className="text-[20px]">{item?.description}</p>
-                        <div className="flex gap-10 pl-3">
+                        <div className="flex gap-10 md:pl-3">
                           <p><span className="font-bold">Price: </span>💰{item?.priceRange}</p>
                           <p><span className="font-bold">Star Rating: </span>{item?.starRating} </p>
                           <p><span className="font-bold">Guest Rating: </span>⭐{item?.guestRating}</p>
@@ -76,9 +76,9 @@ function TripHotels({ trip }) {
             <CarouselNext />
           </Carousel>
         </div>
-        <div className="w-[70%] flex flex-col items-center text-center p-6 m-auto">
-          <h2 className="pl-4 text-[30px] font-bold">Estimated Cost Summary:</h2>
-          <p className="pl-6 pt-2 text-[21px] "> {trip?.tripData?.travelPlanDetails?.estimatedCostSummary?.costEstimate}</p>
+        <div className="md:w-[70%] flex flex-col items-center text-center p-6 m-auto">
+          <h2 className="md:pl-4 text-[30px] font-bold">Estimated Cost Summary:</h2>
+          <p className="md:pl-6 pt-2 text-[21px] "> {trip?.tripData?.travelPlanDetails?.estimatedCostSummary?.costEstimate}</p>
         </div>
     </div>
   );

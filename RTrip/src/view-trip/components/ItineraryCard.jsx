@@ -31,7 +31,7 @@ function ItineraryCard({ item, index }) {
         <div className="flex justify-center items-center lg:border-r-2 xs:border-b-2 xs:mb-3 ">
           <img src={photoURL} alt="city" className="w-[400px] h-[270px] m-4 rounded-xl" />
         </div>
-        <div className="flex flex-col justify-center gap-4 lg:items-start pl-5 lg:w-[800px] xs:w-[80%] m-auto lg:text-start xs:text-center">
+        <div className="flex flex-col justify-center gap-4 lg:items-start md:pl-5 lg:w-[800px] xs:w-full m-auto lg:text-start xs:text-center">
           <h1 className="text-[35px] font-semibold ">{item?.placeName}</h1>
           <p className="text-[20px] font-semibold">{item?.placeDetails}</p>
         </div>

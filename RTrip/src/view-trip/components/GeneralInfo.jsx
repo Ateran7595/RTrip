@@ -7,7 +7,7 @@ function GeneralInfo({ trip }) {
             <h1 className="text-[30px] font-bold text-center">🌍Interesting & Unique Facts About {trip?.tripData?.travelPlanDetails?.suggestedDestination?.name}</h1>
             <div className="lg:text-start xs:text-center">
                 {trip?.tripData?.travelPlanDetails?.interestingUniqueFacts.map((item, index) => (
-                    <p key={index} className="pl-8 pt-4 text-[21px] lg:w-[1200px] m-auto">{index + 1}. {item}</p>
+                    <p key={index} className="lg:pl-8 pt-4 text-[21px] lg:w-[1200px] m-auto">{index + 1}. {item}</p>
                 ))}
             </div>
         </div>
@@ -16,7 +16,7 @@ function GeneralInfo({ trip }) {
             <h1 className="text-[30px] font-bold ">💡General Travel Tips</h1>
             <div >
                 {trip?.tripData?.travelPlanDetails?.generalTravelTips.map((item, index) => (
-                    <p key={index} className="pl-8 pt-4 text-[21px]">✅{item}</p>
+                    <p key={index} className="lg:pl-8 pt-4 text-[21px]">✅{item}</p>
                 ))}
             </div>
         </div>

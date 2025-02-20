@@ -68,8 +68,8 @@ function Header() {
           <Button onClick={() => setOpenDialog(true)}>Sign In</Button>
         )}
       </div>
-      <Dialog open={openDialog} >
-        <DialogContent>
+      <Dialog open={openDialog} onOpenChange={setOpenDialog}  >
+        <DialogContent className='xs:w-[90%] rounded-2xl'>
           <DialogHeader>
             <DialogDescription>
               <div className='flex p-2 justify-center items-center'>
@@ -79,9 +79,9 @@ function Header() {
                 <h2 className='text-center p-2 ml-3 text-neutral-900 text-[17px] font-robotoSlab'>Sign in with Google to save your preferences and plan your next trip!</h2>
                 <div className='flex justify-center '>
                   <Button 
-                  disabled={loading}
-                  onClick={login}
-                  className="font-robotoSlab w-[400px] mt-4"><FcGoogle />Sign In With Google</Button>
+                    disabled={loading}
+                    onClick={login}
+                    className="font-robotoSlab md:w-[400px] mt-4"><FcGoogle />Sign In With Google</Button>
                 </div>
             </DialogDescription>
           </DialogHeader>
