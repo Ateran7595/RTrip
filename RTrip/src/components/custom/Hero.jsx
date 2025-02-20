@@ -15,24 +15,24 @@ function Hero() {
         </Link>
       </div>
 
-      <div className='flex space-x-16 bg-black'>
+      <div className='flex bg-black w-full overflow-hidden'>
           <div className="relative flex z-0 animate-loop-scroll">
-          <img src="/images/city.jpg" alt="city"
-            style={{ maskImage: "linear-gradient(black 85%, transparent)", WebkitMaskImage: "linear-gradient(black 85%, transparent)" }} 
-            className="brightness-50 max-w-none h-[700px]" 
-          />
-          <img src="/images/beach.jpg" alt="beach"
-            style={{ maskImage: "linear-gradient(black 85%, transparent)", WebkitMaskImage: "linear-gradient(black 85%, transparent)" }} 
-            className="brightness-50 max-w-none h-[700px]" 
-          />
-          <img src="/images/countryside.jpg" alt="countryside"
-            style={{ maskImage: "linear-gradient(black 85%, transparent)", WebkitMaskImage: "linear-gradient(black 85%, transparent)" }} 
-            className="brightness-50 max-w-none h-[700px]" 
-          />
-          <img src="/images/hiking.jpg" alt="mountain"
-            style={{ maskImage: "linear-gradient(black 85%, transparent)", WebkitMaskImage: "linear-gradient(black 85%, transparent)" }} 
-            className="brightness-50 max-w-none h-[700px]" 
-          />
+            <img src="/images/city.jpg" alt="city"
+              style={{ maskImage: "linear-gradient(black 85%, transparent)", WebkitMaskImage: "linear-gradient(black 85%, transparent)" }} 
+              className="brightness-50 max-w-none h-[700px]" 
+            />
+            <img src="/images/beach.jpg" alt="beach"
+              style={{ maskImage: "linear-gradient(black 85%, transparent)", WebkitMaskImage: "linear-gradient(black 85%, transparent)" }} 
+              className="brightness-50 max-w-none h-[700px]" 
+            />
+            <img src="/images/countryside.jpg" alt="countryside"
+              style={{ maskImage: "linear-gradient(black 85%, transparent)", WebkitMaskImage: "linear-gradient(black 85%, transparent)" }} 
+              className="brightness-50 max-w-none h-[700px]" 
+            />
+            <img src="/images/hiking.jpg" alt="mountain"
+              style={{ maskImage: "linear-gradient(black 85%, transparent)", WebkitMaskImage: "linear-gradient(black 85%, transparent)" }} 
+              className="brightness-50 max-w-none h-[700px]" 
+            />
         </div>
         <div className="relative flex z-0 animate-loop-scroll"  >
           <img src="/images/city.jpg" alt="city"
